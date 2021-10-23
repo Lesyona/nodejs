@@ -10,11 +10,11 @@ function checkIfSimple(number1, number2) {
     let isSimple = [];
 
     for (let i = number1; i <= number2; i++) {
-        for (let j = 2; j <= i - 1; j++) {
-            if (i % j === 0) {
+        for (let j = 2; j <= i; j++) {
+            if (i % j === 0 && i !== 2) {
                 break;
             }
-            if (j === i - 1 && i % j !== 0 ) {
+            if (i === 2 || (j === i - 1 && i % j !== 0)) {
                 isSimple.push(i);
             }
         }
